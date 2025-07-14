@@ -25,7 +25,7 @@ function WordSwitcher({ titles }) {
   }, []);
   return (
     <>
-      <div className="h-[100vh] p-5 bg-black flex flex-col text-white  border-white justify-center items-center">
+      <div className="h-[30vh] p-5 bg-black flex flex-col text-white  border-white justify-center items-center">
         <div className="flex gap-2">
           <p className="text-5xl">I'm a</p>
           <ul className="w-[250px] min-h-[40px]   relative">

@@ -10,7 +10,7 @@ function AnimateLines() {
   ];
 
   useLayoutEffect(() => {
-    const tl = gsap.timeline();
+    const tl = gsap.timeline({ repeat: Infinity, yoyo: true });
     tl.fromTo(
       lineRef.current,
       {
@@ -33,8 +33,7 @@ function AnimateLines() {
   }, []);
   return (
     <>
-      <div className="w-full h-[100vh] text-white bg-black flex flex-col gap-10 justify-center items-center">
-        <h1 className="text-4xl text-blue-500">Animate Text by Lines</h1>
+      <div className="w-full h-[30vh] text-white bg-black flex flex-col gap-10 justify-center items-center">
         <ul className="flex flex-col items-center  text-2xl font-semibold">
           {words.map((value, i) => (
             <li key={i} ref={(el) => (lineRef.current[i] = el)}>

@@ -8,7 +8,7 @@ function AnimateWords() {
   const splitWords = words.split(" ");
 
   useLayoutEffect(() => {
-    const tl = gsap.timeline();
+    const tl = gsap.timeline({ repeat: Infinity, yoyo: true });
     tl.fromTo(
       wordsRef.current,
       { y: -100, opacity: 0, rotate: -80 },
@@ -25,8 +25,7 @@ function AnimateWords() {
 
   return (
     <>
-      <div className="w-full h-[100vh] bg-black flex flex-col gap-10 justify-center items-center">
-        <h1 className="text-4xl text-blue-500">Animate Text by Lines</h1>
+      <div className="w-full h-[30vh] bg-black flex flex-col gap-10 justify-center items-center">
         <ul className="w-[350px]  justify-center flex flex-wrap gap-1">
           {splitWords.map((word, i) => (
             <li

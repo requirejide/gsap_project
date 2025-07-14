@@ -27,8 +27,7 @@ function AnimateChars() {
   }, []);
   return (
     <>
-      <div className="w-full h-[100vh] text-white bg-black flex flex-col gap-10 overflow-hidden justify-center items-center  ">
-        <h1 className="text-4xl text-blue-500">Animate Text by Lines</h1>
+      <div className="w-full h-[30vh] text-white bg-black flex flex-col gap-10 overflow-hidden justify-center items-center  ">
         <ul className="text-center  text-base w-[390px] ">
           {splitWords.map((el, i) => (
             <li
